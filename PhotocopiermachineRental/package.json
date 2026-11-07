@@ -1,0 +1,16 @@
+{
+  "name": "copixa-template",
+  "version": "1.1.0",
+  "description": "Copixa — Photocopier & Office Machine Rental HTML template (Tailwind CSS)",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
+    "build": "npm run build:css && node scripts/build-public.mjs",
+    "preview": "npx --yes serve public"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  },
+  "license": "SEE LICENSE IN README.md"
+}
