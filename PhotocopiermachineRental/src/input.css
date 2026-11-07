@@ -188,7 +188,8 @@
 [data-reveal="skew-up"]   { transform: skewY(5deg) translateY(50px); }
 [data-reveal="sheet"]     { transform: translateY(-70px) rotate(calc(-4deg * var(--dir))); }
 [data-reveal="drop"]      { transform: translateY(-30px) scale(.96); }
-[data-reveal].is-visible  { opacity: 1; transform: none; filter: none; clip-path: inset(0 0 0 0); }
+[data-reveal].is-visible  { opacity: 1; transform: none; filter: none; clip-path: none; }
+[data-reveal^="clip"].is-visible { clip-path: inset(0 0 0 0); } /* only wipe reveals keep a clip box — others must not cut off floating badges */
 .no-js [data-reveal] { opacity: 1; transform: none; filter: none; clip-path: none; }
 
 /* Split headline words */
